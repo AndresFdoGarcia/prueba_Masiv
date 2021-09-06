@@ -1,10 +1,11 @@
 {
-  "name": "api-masiv",
+  "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "npm init",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,5 @@
     "mongoose": "^5.13.2",
     "morgan": "^1.10.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
-  }
+  "devDependencies": {}
 }
