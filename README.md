@@ -1,4 +1,4 @@
-# prueba_Masiv
+# Prueba_Masiv
 Prueba técnica Masiv
 
 Para el desarrollo de la API se utilizo como framework NodeJs y para persistencia de datos se utilizó un base de datos NoSQL : MongoDB (Atlas), en la nube.
@@ -7,13 +7,27 @@ Esta API simula una ruleta de casino donde debería ser posible hacer apuestas n
 <br>
 <br>
 
+## Despliegue
+
+Ahora mismo la aplicación ya se encuentra desplegada en AWS, relacionada con su base de datos en la nube, se puede enontrar en el siguiente enlace : 
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com
+
+<br>
+<br>
+
 ## Endpoints
+
+### A continuación se muestran los endpoints de la API, se muestran las rutas para despliegue local al clonar este repositorio ó las rutas para pruebas en producción 
 
  - ***Lista de ruletas***
 <br> GET
  ```cURL
 http://localhost:3000/api/roulette/all
 ```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/all
+```
+
 <br>
 
 - ***Creación de ruleta***
@@ -21,12 +35,18 @@ http://localhost:3000/api/roulette/all
  ```cURL
 http://localhost:3000/api/roulette/admin
 ```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/admin
+```
 <br>
 
 - ***Apertura de ruleta***
 <br>PUT
 ```cURL
 http://localhost:3000/api/roulette/:id
+```
+```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/:id
 ```
 > Se debe tener en cuenta el reemplazar ":id" por el id de la ruleta que se desea abrir. Para darle un sentido a esta opción, se considera que una ruleta solo se puede abrir en un estado anterior "Created" y que una ruleta cerrada, "Close" no puede abrir.
 
@@ -37,12 +57,18 @@ http://localhost:3000/api/roulette/:id
  ```cURL
 http://localhost:3000/api/roulette/admin
 ```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/admin
+```
 <br>
 
 - ***Apuesta a un número***
 <br> POST
  ```cURL
 http://localhost:3000/api/bet/create
+```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/bet/create
 ```
 <br>
 
@@ -64,6 +90,9 @@ A continuación se muestra un ejemplo de como debería ir la petición desde el 
  ```cURL
 http://localhost:3000/api/roulette/assingbet/:id
 ```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/assingbet/:id
+```
 > Se debe tener en cuenta el reemplazar ":id" por el id de la ruleta (abierta) a la cual se desea apostar.
 
 <br>
@@ -72,6 +101,9 @@ http://localhost:3000/api/roulette/assingbet/:id
 <br> PUT
  ```cURL
 http://localhost:3000/api/roulette/close/:id
+```
+ ```cURL
+http://pruebamasiv-env.eba-jygjzy3d.us-east-1.elasticbeanstalk.com/api/roulette/close/:id
 ```
 > Se debe tener en cuenta el reemplazar ":id" por el id de la ruleta (abierta) que se desa cerrar.
 
